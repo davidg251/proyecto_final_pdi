@@ -1,0 +1,8 @@
+*.pyc
+salidas/
+CMakeCache.txt
+CMakeFiles/
+cmake_install.cmake
+CMakeLists.txt
+main
+
