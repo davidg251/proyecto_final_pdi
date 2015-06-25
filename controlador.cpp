@@ -124,17 +124,19 @@ void Controlador::ejecutarMejora()
     for(int k=y0+2;k<yz;k++)
     {
       Vec3b color = destino.at<Vec3b>(Point(temp,k));
+      
       if( (color[0] + color[1]+ color[2]) >0 )
       {
-          cout<<"diametro interno en :"<< k-y0<<endl;
+          cout<<"diametro interno :"<< k-y0<<endl;
           break;
       }
+    destino.at<Vec3b>(Point(temp,k)) = 255;
     }
 
 
 
 
-    line( destino, Point( temp, 0 ), Point( temp, 500), Scalar( 255, 0, 0 ),  1, 1 );
+    //line( destino, Point( temp, 0 ), Point( temp, 500), Scalar( 255, 0, 0 ),  1, 1 );
     imwrite("salidas/salida_"+nombreImagen,destino);
 
     cout<<nombreImagen<<endl;
