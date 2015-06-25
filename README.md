@@ -1,4 +1,4 @@
-#Compilar
+#Compilar y Ejecutar
 
 ```
 cmake CMakeLists.txt
